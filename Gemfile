@@ -7,6 +7,8 @@ gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'bower-rails'
 gem 'slim-rails'
+gem 'uglifier'
+
 gem 'devise-bootstrap-views'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'

@@ -245,6 +245,8 @@ GEM
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uglifier (3.0.0)
+      execjs (>= 0.3.0, < 3)
     unicode (0.4.4.2)
     warden (1.2.6)
       rack (>= 1.0)
@@ -287,6 +289,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   turbolinks
+  uglifier
   web-console (~> 2.0)
 
 BUNDLED WITH
