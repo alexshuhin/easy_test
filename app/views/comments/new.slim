@@ -1,0 +1,6 @@
+h1
+  | Создать комментарий
+  small<
+    = link_to 'вернуться к посту', post_path(@post)
+hr
+= render partial: 'form', locals: { post: @post, comment: @comment }

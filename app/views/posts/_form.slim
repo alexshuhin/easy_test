@@ -1,0 +1,13 @@
+= simple_form_for post, wrapper: :horizontal_form,
+  html: { class: 'form-horizontal' } do |f|
+
+  = f.input :author_id, as: :hidden
+  = f.input :title
+  = f.input :tag_list, as: :select, collection: ActsAsTaggableOn::Tag.all.map(&:name),
+    input_html: { multiple: true, class: ['tag-select'] }
+  = f.input :body, input_html: { rows: 16 }
+  = f.input :published_at, as: :date_picker
+  = f.input :published, wrapper: :horizontal_boolean
+  .form-group
+    .col-md-9.col-md-offset-3
+      = f.button :submit, class: 'btn-primary'

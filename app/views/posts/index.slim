@@ -1,0 +1,14 @@
+h1
+  - if can? :create, Post
+    .pull-right
+      = link_to fa_icon('plus', text: 'Создать пост'), new_post_path,
+        class: 'btn btn-primary'
+  | Блог
+hr
+.posts
+  .container
+    .row
+      .col-md-3
+        = render partial: 'tags_list', locals: { tags: @tags }
+      .col-md-9
+        = render partial: 'posts', locals: { posts: @posts }

@@ -1,0 +1,9 @@
+h1
+  - if can? :create, Post
+    .pull-right
+      = link_to fa_icon('plus', text: 'Создать пост'), new_post_path,
+        class: 'btn btn-primary'
+  | Мои посты
+hr
+.posts
+  = render partial: 'posts', locals: { posts: @posts }

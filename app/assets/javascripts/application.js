@@ -11,7 +11,29 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
 //= require turbolinks
 //= require bootstrap/dist/js/bootstrap
+//= require moment
+//= require bootstrap-datetimepicker
+//= require moment/ru
+//= require select2-full
 //
 //= require_tree .
+//
+
+$(function() {
+  $('.datetimepicker').datetimepicker({
+    locale: 'ru',
+    maxDate: new Date(),
+    allowInputToggle: true
+  });
+
+  $('.tag-select').select2({
+    theme: 'bootstrap',
+    placeholder: 'Выберете теги',
+    tokenSeparators: [','],
+    allowClear: true,
+    tags: true
+  })
+});

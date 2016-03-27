@@ -1,0 +1,31 @@
+h1
+  = @post.title
+  - if can? :edit, @post
+    =< link_to fa_icon('pencil', text: 'редактировать'),
+      edit_post_path(@post), class: 'btn btn-link btn-xs'
+  - if can? :destroy, @post
+    =< link_to fa_icon('times', text: 'удалить'),
+      post_path(@post), method: :delete, class: 'btn btn-danger btn-xs',
+      data: { confirm: 'Вы действительно хотите удалить пост?' }
+p<
+  = link_to 'Вернуться к списку', root_url
+small.well.well-sm
+  b Автор:
+  =< @post.author.name
+  | , 
+  b Опубликовано:
+  =< l @post.published_at, format: :short
+  | , 
+  - if @post.tag_list.present?
+    b Теги:
+    - @post.tag_list.each do |tag|
+      span.label.label-default=< tag
+hr
+body
+  == markdown(@post.body)
+h3
+  .pull-right
+    = link_to fa_icon('plus', text: 'Создать комментарий'),
+      new_post_comment_path(@post), class: 'btn btn-primary'
+  | Комментарии
+= render partial: 'comments/comments', locals: { comments: @comments }

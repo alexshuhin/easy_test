@@ -1,0 +1,82 @@
+//= require_tree .
+//= require_self
+//= require bootstrap/dist/css/bootstrap
+//= require fontawesome/css/font-awesome
+//= require devise_bootstrap_views
+//= require bootstrap-datetimepicker
+
+//= require select2
+//= require select2-bootstrap
+
+.label.css1 { background-color: #777 }
+.label.css2 { background-color: #977 }
+.label.css3 { background-color: #b77 }
+.label.css4 { background-color: #d77 }
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 3px;
+  h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  code {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 3px;
+  }
+  .bs-body {
+    margin-top: 2em;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  + .bs-callout {
+    margin-top: -5px;
+  }
+}
+
+.bs-callout-default {
+  border-left-color: #777;
+  h3 {
+    color: #777;
+  }
+}
+
+.bs-callout-primary {
+  border-left-color: #428bca;
+  h3 {
+    color: #428bca;
+  }
+}
+
+.bs-callout-success {
+  border-left-color: #5cb85c;
+  h3 {
+    color: #5cb85c;
+  }
+}
+
+.bs-callout-danger {
+  border-left-color: #d9534f;
+  h3 {
+    color: #d9534f;
+  }
+}
+
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+  h3 {
+    color: #f0ad4e;
+  }
+}
+
+.bs-callout-info {
+  border-left-color: #5bc0de;
+  h3 {
+    color: #5bc0de;
+  }
+}

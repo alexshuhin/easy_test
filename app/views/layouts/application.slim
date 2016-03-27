@@ -5,19 +5,22 @@ head
   title>EasyTest
 
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true, 'async' => true
   = csrf_meta_tags
 body
   .navbar.navbar-default.navbar-inverse.navbar-static-top
     .container
       .navbar-header
-        .navbar-brand Простое тестовое задание
-      = render_navigation
+        = link_to 'Простое тестовое задание', root_path,
+          class: 'navbar-brand'
+      = render_navigation context: :header
 
   .container
-    - if notice.present?
-      .alert.alert-success= notice
-    - if alert.present?
-      .alert.alert-danger= alert
+    .row
+      .col-md-12
+        - if notice.present?
+          .alert.alert-success= notice
+        - if alert.present?
+          .alert.alert-danger= alert
 
-    = yield
+        = yield

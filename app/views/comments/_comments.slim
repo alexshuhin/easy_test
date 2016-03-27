@@ -1,0 +1,21 @@
+- if comments.count > 0
+  - comments.each do |comment|
+    .bs-callout.bs-callout-default
+      .comment-block
+        .pull-right
+          b Создано:
+          =< I18n.l comment.created_at, format: :long
+        .author
+          b=< comment.author.name
+          - if can? :edit, comment
+            =< link_to fa_icon('pencil', text: 'редактировать'),
+              edit_comment_path(comment), class: 'btn btn-link btn-xs'
+          - if can? :destroy, comment
+            =< link_to fa_icon('times', text: 'удалить'),
+              comment_path(comment), method: :delete,
+              class: 'btn btn-danger btn-xs',
+              data: { confirm: 'Вы действительно хотите удалить комментарий?' }
+        .body== markdown(comment.body)
+- else
+  .well
+    h4 Нет комментариев
