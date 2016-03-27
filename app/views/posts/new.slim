@@ -1,6 +1,6 @@
 h1
   | Создать пост
-  small<
-    = link_to 'вернуться к списку', root_url
+p<
+  = link_to 'Вернуться к списку', root_url
 hr
 = render partial: 'form', locals: { post: @post }
