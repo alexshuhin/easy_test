@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     if params[:tag].present?
       @posts = @posts.tagged_with(params[:tag])
     end
-    @tags = Post.tag_counts_on(:tags)
+    @tags = Post.published.tag_counts_on(:tags)
   end
 
   def my

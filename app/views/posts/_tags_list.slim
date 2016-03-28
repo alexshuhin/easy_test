@@ -1,7 +1,7 @@
 h3 Облако тегов
 - if @tags.count > 0
   - tag_cloud(@tags.sort_by(&:name), (1..4).map{|i| "css#{i}" }) do |tag, tag_css|
-    = link_to "#{tag.name} (#{tag.count})", posts_path(tag: tag.name),
+    =< link_to "#{tag.name} (#{tag.count})", posts_path(tag: tag.name),
       class: "label label-default #{tag_css}"
 
 - else
