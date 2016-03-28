@@ -1,12 +1,14 @@
 //= require_tree .
 //= require_self
-//= require bootstrap/dist/css/bootstrap
 //= require font-awesome
 //= require devise_bootstrap_views
 //= require bootstrap-datetimepicker
 
 //= require select2
 //= require select2-bootstrap
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 .label.css1 { background-color: #777 }
 .label.css2 { background-color: #977 }
