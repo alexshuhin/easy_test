@@ -5,6 +5,13 @@ h1
         class: 'btn btn-primary'
   | Блог
 hr
+- if params[:tag]
+  div
+    span.well.well-sm
+      b Фильтр по тегу 
+      span.label.label-default=< params[:tag]
+      | ,
+      =< link_to fa_icon('times', text: 'убрать фильтр'), root_path
 .posts
   .container
     .row

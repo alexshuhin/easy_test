@@ -5,9 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5.1'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
+gem 'jquery-rails'
 gem 'bower-rails'
 gem 'slim-rails'
-gem 'uglifier'
+gem 'coffee-rails'
 
 gem 'devise-bootstrap-views'
 gem 'kaminari'
@@ -17,6 +18,7 @@ gem 'rs_russian'
 gem 'redcarpet'
 gem 'select2-rails'
 gem 'acts-as-taggable-on'
+gem 'therubyracer'
 
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
@@ -43,4 +45,8 @@ group :development do
   gem 'pry-byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+end
+
+group :production do
+gem 'uglifier'
 end

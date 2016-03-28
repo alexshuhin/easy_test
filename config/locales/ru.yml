@@ -1,0 +1,21 @@
+ru:
+  activerecord:
+    models:
+      post: Пост
+      comment: Комментарий
+    attributes:
+      post:
+        title: Заголовок
+        tag_list: Теги
+        body: Текст
+        published_at: Время публикации
+        published: Опубликовано
+      comment:
+        body: Текст
+      user:
+        name: Имя
+        email: Почта
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        remember_me: Запомнить меня
+

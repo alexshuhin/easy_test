@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe User do
+  it 'should be ok' do
+    expect(true).to be_truthy
+  end
 end
